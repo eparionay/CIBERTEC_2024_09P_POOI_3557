@@ -13,6 +13,7 @@ namespace POOI_Semana01
             Docente doc0 = new Docente();
             Console.WriteLine(doc0.codigo);
             Console.WriteLine(doc0.nombre);
+            doc0.saludar();
 
             Console.WriteLine("***************");
 
