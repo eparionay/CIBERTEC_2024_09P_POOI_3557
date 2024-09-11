@@ -11,7 +11,7 @@ namespace POOI_Semana01_A
 
         public string nombre { get; set; }
         public string apellido { get; set; }
-        public int edad { get; set;  }
+        public int edad { get; set; }
 
 
     }
