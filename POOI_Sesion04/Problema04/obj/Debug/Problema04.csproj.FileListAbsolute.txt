@@ -1,0 +1,7 @@
+C:\Users\epariona\Desktop\POOI\POOI_Proyectos_2024_III\POOI_Sesion04\Problema04\bin\Debug\Problema04.exe.config
+C:\Users\epariona\Desktop\POOI\POOI_Proyectos_2024_III\POOI_Sesion04\Problema04\bin\Debug\Problema04.exe
+C:\Users\epariona\Desktop\POOI\POOI_Proyectos_2024_III\POOI_Sesion04\Problema04\bin\Debug\Problema04.pdb
+C:\Users\epariona\Desktop\POOI\POOI_Proyectos_2024_III\POOI_Sesion04\Problema04\obj\Debug\Problema04.csproj.AssemblyReference.cache
+C:\Users\epariona\Desktop\POOI\POOI_Proyectos_2024_III\POOI_Sesion04\Problema04\obj\Debug\Problema04.csproj.CoreCompileInputs.cache
+C:\Users\epariona\Desktop\POOI\POOI_Proyectos_2024_III\POOI_Sesion04\Problema04\obj\Debug\Problema04.exe
+C:\Users\epariona\Desktop\POOI\POOI_Proyectos_2024_III\POOI_Sesion04\Problema04\obj\Debug\Problema04.pdb
