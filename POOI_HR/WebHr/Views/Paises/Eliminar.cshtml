@@ -1,0 +1,49 @@
+﻿@model WebHr.Models.Pais
+
+@{
+    ViewBag.Title = "Eliminar";
+}
+
+<h2>Eliminar</h2>
+
+<h3>Deseas eliminar el registro?</h3>
+<div>
+    <h4>Pais</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.country_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.country_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.country_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.country_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.region_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.region_id)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="hidden" name="codigo" value="@Model.country_id" />
+            <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+            @Html.ActionLink("Ir a reporte", "reporte")
+        </div>
+    }
+</div>

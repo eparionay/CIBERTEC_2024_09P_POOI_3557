@@ -1,0 +1,45 @@
+﻿@model IEnumerable<WebHr.Models.Pais>
+
+@{
+    ViewBag.Title = "reporte";
+}
+
+<h2>reporte</h2>
+
+<p>
+    @Html.ActionLink("Crear Pais", "CrearPais")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.country_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.country_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.region_id)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.country_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.country_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.region_id)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Editar", new {  codigo=item.country_id  }) |
+            @Html.ActionLink("Detalle", "Detalle", new {  codigo=item.country_id }) |
+            @Html.ActionLink("Eliminar", "Eliminar", new {  codigo=item.country_id  })
+        </td>
+    </tr>
+}
+
+</table>

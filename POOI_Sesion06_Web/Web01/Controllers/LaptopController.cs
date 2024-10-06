@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -72,6 +74,10 @@ namespace Web01.Controllers
                 contador++;
                 mensaje = "El registro fue agregado a la lista";
                 Debug.WriteLine("El codigo ingresado no existe");
+                StreamWriter escritor = new StreamWriter("C:/log/archivo.txt", false);
+                string json =JsonConvert.SerializeObject(lista);
+                escritor.WriteLine(json);
+                escritor.Close();
             }
             else
             {
@@ -80,6 +86,10 @@ namespace Web01.Controllers
                 Debug.WriteLine("Posicion : " + indice);
             }
 
+            
+
+
+           
             ViewBag.ContadorRegistros = contador;
             ViewBag.MensajeValidacion = mensaje;
             Debug.WriteLine("Total Registros : " + lista.Count);
