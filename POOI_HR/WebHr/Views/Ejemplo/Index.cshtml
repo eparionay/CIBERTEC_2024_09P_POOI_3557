@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<form>
+    <label>Nombre</label>
+    @Html.TextBox("nombre")
+
+    <label>Apellido</label>
+    @Html.TextBox("apellido")
+
+    <label>Regiones</label>
+    @Html.DropDownList("selectRegiones", (SelectList)ViewBag.listaRegion)
+    <button>Procesar</button>
+
+</form>
+
+

@@ -23,24 +23,34 @@ namespace WebHr.Controllers
         public ActionResult reporte()
         {
             ServicioPais servicio = new ServicioPais();
-            return View(servicio.operacionesLectura("ConsultarTodo",""));
+            return View(servicio.operacionesLectura("ConsultarTodo", ""));
         }
+        
         [HttpGet]
         public ActionResult CrearPais()
         {
+            ViewBag.comboRegiones = new SelectList(
+                listaRegiones(), "region_id", "region_name"
+                );
+
             return View(new Pais());
         }
+        
         [HttpPost]
         public ActionResult CrearPais(Pais p)
         {
             Debug.WriteLine("Codigo : " + p.country_id);
             Debug.WriteLine("Nombre : " + p.country_name);
             Debug.WriteLine("Region : " + p.region_id);
-            ServicioPais servicio = new ServicioPais();
-            int procesar = servicio.operacionesEscritura("Insertar", p);
-            if (procesar>=0)
+
+            if (ModelState.IsValid)
             {
-                return RedirectToAction("reporte");
+                ServicioPais servicio = new ServicioPais();
+                int procesar = servicio.operacionesEscritura("Insertar", p);
+                if (procesar >= 0)
+                {
+                    return RedirectToAction("reporte");
+                }
             }
             return View(p);
         }
@@ -58,7 +68,7 @@ namespace WebHr.Controllers
         {
             ServicioPais servicio = new ServicioPais();
             int procesar = servicio.operacionesEscritura("Actualizar", p);
-            if (procesar>=0)
+            if (procesar >= 0)
             {
                 return RedirectToAction("reporte");
             }
@@ -72,7 +82,6 @@ namespace WebHr.Controllers
             List<Pais> lista = servicio.operacionesLectura("ConsultarXId", codigo);
             return View(lista.First());
         }
-
 
         public ActionResult Eliminar(string codigo)
         {
@@ -91,12 +100,32 @@ namespace WebHr.Controllers
             p.country_id = codigo;
             int procesar = servicio.operacionesEscritura("Eliminar", p);
 
-            if (procesar>=0)
+            if (procesar >= 0)
             {
                 return RedirectToAction("reporte");
             }
             return View();
         }
+
+        public List<Region> listaRegiones()
+        {
+            
+    
+            /*
+            Region region1= new Region();
+            region1.region_id = 1;
+            region1.region_name = "America";
+            Region region2 = new Region();
+            region2.region_id = 2;
+            region2.region_name = "Europa";
+            listaRegiones.Add(region1);
+            listaRegiones.Add(region2);*/
+            ServicioRegion servicioRegion = new ServicioRegion();
+            List<Region> listaRegiones = servicioRegion.operacionesLectura("ConsultarTodo",0);
+            return listaRegiones;
+        }
+
+
 
 
 
