@@ -121,20 +121,25 @@
     <Compile Include="App_Start\BundleConfig2.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AlumnoController.cs" />
     <Compile Include="Controllers\EjemploController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PaisesController.cs" />
     <Compile Include="Controllers\RegionController.cs" />
+    <Compile Include="dao\daoImpl\AlumnoDaoImpl.cs" />
     <Compile Include="dao\daoImpl\PaisDaoImpl.cs" />
     <Compile Include="dao\daoImpl\RegionDaoImpl.cs" />
+    <Compile Include="dao\IAlumnoDao.cs" />
     <Compile Include="dao\IGeneralDao.cs" />
     <Compile Include="dao\IRegionDao.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Alumno.cs" />
     <Compile Include="Models\Pais.cs" />
     <Compile Include="Models\Region.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="servicio\ServicioAlumno.cs" />
     <Compile Include="servicio\ServicioPais.cs" />
     <Compile Include="servicio\ServicioRegion.cs" />
   </ItemGroup>
@@ -195,6 +200,7 @@
     <Content Include="Views\Paises\Detalle.cshtml" />
     <Content Include="Views\Paises\Eliminar.cshtml" />
     <Content Include="Views\Ejemplo\Index.cshtml" />
+    <Content Include="Views\Alumno\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
