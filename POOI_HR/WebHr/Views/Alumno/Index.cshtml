@@ -4,11 +4,20 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Consulta de Alumnos</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<form>
+    <label>Apellido :</label>
+    @Html.TextBox("apellido", "", new { @class = "form-control", placeholder="Ingrese Apellido" })
+
+    <label>Pais:</label>
+    @Html.TextBox("pais", "", new { @class = "form-control", placeholder="Ingrese nombre de pais" })
+
+    <br/>
+    <button class="btn btn-primary">Consultar</button>
+
+</form>
+
 <table class="table">
     <tr>
         <th>

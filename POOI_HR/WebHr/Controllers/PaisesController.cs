@@ -9,6 +9,7 @@ using System.Web.Mvc;
 using System.Web.UI.WebControls;
 using WebHr.Models;
 using WebHr.servicio;
+using System.Data.SqlClient;
 
 namespace WebHr.Controllers
 {
@@ -125,7 +126,68 @@ namespace WebHr.Controllers
             return listaRegiones;
         }
 
+        public ActionResult BusquedaPaises(string pais= "", int region=0)
+        {
+            ViewBag.comboRegion = new SelectList(
+                listadoRegiones(), "region_id", "region_name");
 
+            return View(listadoPaises(pais, region));
+        }
+
+        public List<Region> listadoRegiones()
+        {
+            List<Region> lista = new List<Region>();
+            Region objReg;
+            string cadenaCon = ConfigurationManager.ConnectionStrings["cnx_bd_hr"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(cadenaCon))
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("select region_id, region_name from regions", con);
+                //SqlCommand cmd = new SqlCommand("select region_id, region_name from regions where region_id=@region", con);
+                cmd.CommandType = System.Data.CommandType.Text;
+                //cmd.Parameters.Clear();
+                //cmd.Parameters.AddWithValue("@region", 1);
+                using (SqlDataReader reader= cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        objReg= new Region();
+                        objReg.region_id = reader.GetInt32(0);
+                        objReg.region_name = reader.GetString(1);
+                        lista.Add(objReg);
+                    }
+                }
+            }
+            return lista;
+        }
+
+        public List<Pais> listadoPaises(string nombrePais, int region)
+        {
+            List<Pais> lista = new List<Pais>();
+            Pais objPais;
+            string cadenaCon = ConfigurationManager.ConnectionStrings["cnx_bd_hr"].ConnectionString;
+            using(SqlConnection con = new SqlConnection(cadenaCon))
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("usp_pais_busqueda", con);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@country_name", nombrePais );
+                cmd.Parameters.AddWithValue("@region_id", region);
+                using (SqlDataReader reader= cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        objPais= new Pais();
+                        objPais.country_id= reader.GetString(0);
+                        objPais.country_name= reader.GetString(1);
+                        objPais.region_id= reader.GetInt32(2);
+                        lista.Add(objPais);
+                    }
+                }
+            }
+            return lista;
+        }
 
 
 

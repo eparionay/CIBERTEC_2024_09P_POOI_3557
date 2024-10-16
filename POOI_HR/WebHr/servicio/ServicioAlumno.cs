@@ -10,12 +10,10 @@ namespace WebHr.servicio
 {
     public class ServicioAlumno
     {
-        public List<Alumno> listaAlumno()
+        public List<Alumno> listaAlumno(string apellido, string pais)
         {
             IAlumnoDao dao = new AlumnoDaoImpl();
-            return dao.listaAlumno();
+            return dao.listaAlumno(apellido, pais);
         }
-
-
     }
 }

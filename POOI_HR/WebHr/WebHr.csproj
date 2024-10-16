@@ -201,6 +201,7 @@
     <Content Include="Views\Paises\Eliminar.cshtml" />
     <Content Include="Views\Ejemplo\Index.cshtml" />
     <Content Include="Views\Alumno\Index.cshtml" />
+    <Content Include="Views\Paises\BusquedaPaises.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

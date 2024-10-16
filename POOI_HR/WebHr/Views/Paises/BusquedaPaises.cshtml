@@ -1,0 +1,51 @@
+﻿@model IEnumerable<WebHr.Models.Pais>
+
+@{
+    ViewBag.Title = "BusquedaPaises";
+}
+
+<h2>Formulario de Busqueda</h2>
+
+<form>
+    <label>Nombre de Pais</label>
+    @Html.TextBox("pais", "", new { @class="form-control", placeholder="Ingrese el pais"  } )
+
+    <label>Region</label>
+    @Html.DropDownList("region", 
+        (SelectList)ViewBag.comboRegion, "Seleccione",
+            new {@class = "form-control"}
+         )
+    <button class="btn btn-primary">Consultar</button>
+
+</form>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.country_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.country_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.region_id)
+        </th>
+       
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.country_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.country_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.region_id)
+        </td>
+       
+    </tr>
+}
+
+</table>

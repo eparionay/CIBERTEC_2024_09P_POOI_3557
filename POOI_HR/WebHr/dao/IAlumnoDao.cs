@@ -10,7 +10,7 @@ namespace WebHr.dao
 {
     internal interface IAlumnoDao
     {
-        List<Alumno> listaAlumno();
+        List<Alumno> listaAlumno(string ape, string pais);
 
     }
 }

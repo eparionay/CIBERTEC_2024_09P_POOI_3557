@@ -13,7 +13,7 @@ namespace WebHr.dao.daoImpl
 {
     public class AlumnoDaoImpl : IAlumnoDao
     {
-        public List<Alumno> listaAlumno()
+        public List<Alumno> listaAlumno(string apellido, string pais)
         {
             List < Alumno > lista= new List<Alumno> ();
             SqlConnection con = null;
@@ -26,6 +26,10 @@ namespace WebHr.dao.daoImpl
                 con.Open();
                 cmd = new SqlCommand("usp_alumno_consulta", con);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.Parameters.Clear();
+                //cmd.Parameters.AddWithValue("@nombre", nombre );
+                cmd.Parameters.AddWithValue("@apellido", apellido );
+                cmd.Parameters.AddWithValue("@pais", pais);
 
                 dr = cmd.ExecuteReader();
                 Alumno alu;
