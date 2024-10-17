@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\epariona\\Desktop\\POOI_Semana05\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FF24BD52-5D61-4882-B613-367FDFC1837E}|POOI_Semana05\\POOI_Semana05.csproj|c:\\users\\epariona\\desktop\\pooi_semana05\\pooi_semana05\\controllers\\estudiantecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF24BD52-5D61-4882-B613-367FDFC1837E}|POOI_Semana05\\POOI_Semana05.csproj|solutionrelative:pooi_semana05\\controllers\\estudiantecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF24BD52-5D61-4882-B613-367FDFC1837E}|POOI_Semana05\\POOI_Semana05.csproj|c:\\users\\epariona\\desktop\\pooi_semana05\\pooi_semana05\\views\\estudiante\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF24BD52-5D61-4882-B613-367FDFC1837E}|POOI_Semana05\\POOI_Semana05.csproj|solutionrelative:pooi_semana05\\views\\estudiante\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF24BD52-5D61-4882-B613-367FDFC1837E}|POOI_Semana05\\POOI_Semana05.csproj|c:\\users\\epariona\\desktop\\pooi_semana05\\pooi_semana05\\models\\comboprocedimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF24BD52-5D61-4882-B613-367FDFC1837E}|POOI_Semana05\\POOI_Semana05.csproj|solutionrelative:pooi_semana05\\models\\comboprocedimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 320,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\epariona\\Desktop\\POOI_Semana05\\POOI_Semana05\\Views\\Estudiante\\Index.cshtml",
+              "RelativeDocumentMoniker": "POOI_Semana05\\Views\\Estudiante\\Index.cshtml",
+              "ToolTip": "C:\\Users\\epariona\\Desktop\\POOI_Semana05\\POOI_Semana05\\Views\\Estudiante\\Index.cshtml",
+              "RelativeToolTip": "POOI_Semana05\\Views\\Estudiante\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-17T02:14:59.751Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ComboProcedimiento.cs",
+              "DocumentMoniker": "C:\\Users\\epariona\\Desktop\\POOI_Semana05\\POOI_Semana05\\Models\\ComboProcedimiento.cs",
+              "RelativeDocumentMoniker": "POOI_Semana05\\Models\\ComboProcedimiento.cs",
+              "ToolTip": "C:\\Users\\epariona\\Desktop\\POOI_Semana05\\POOI_Semana05\\Models\\ComboProcedimiento.cs",
+              "RelativeToolTip": "POOI_Semana05\\Models\\ComboProcedimiento.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAsAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T02:08:13.322Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EstudianteController.cs",
+              "DocumentMoniker": "C:\\Users\\epariona\\Desktop\\POOI_Semana05\\POOI_Semana05\\Controllers\\EstudianteController.cs",
+              "RelativeDocumentMoniker": "POOI_Semana05\\Controllers\\EstudianteController.cs",
+              "ToolTip": "C:\\Users\\epariona\\Desktop\\POOI_Semana05\\POOI_Semana05\\Controllers\\EstudianteController.cs",
+              "RelativeToolTip": "POOI_Semana05\\Controllers\\EstudianteController.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwAUAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T01:06:05.414Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+﻿@model IEnumerable<POOI_Semana05.Models.Estudiante>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<form>
+    <label>Codigo</label>
+    @Html.TextBox("codigo", "", new { @class = "form-control" })
+    <br />
+    <label>Apellido</label>
+    @Html.TextBox("apellido", "", new { @class = "form-control" })
+    <br />
+    <label>Region</label>
+    @Html.DropDownList("cboRegion",
+                (SelectList)ViewBag.comboRegiones, "Seleccione", new { @class = "form-control" })
+
+    <label>Departamento</label>
+    @Html.DropDownList("cboDepartamento", (SelectList)ViewBag.comboDepartamentos, "Seleccione",
+            new { @class = "form-control" }
+        )
+
+    <label>Trabajo</label>
+    @Html.DropDownList("cboTrabajo", (SelectList)ViewBag.comboTrabajo, "Seleccione",
+            new { @class = "form-control" }
+        )
+
+
+    <button class="btn btn-primary">Consultar</button>
+</form>
+
+
+
+
+<p>
+    @Html.ActionLink("Crear", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.codigo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.apellido)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.apellido)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Editar", new {  id=item.codigo  }) |
+            @Html.ActionLink("Details", "Detalle", new { id = item.codigo }) |
+            @Html.ActionLink("Delete", "Eliminar", new { id = item.codigo })
+        </td>
+    </tr>
+}
+
+</table>
