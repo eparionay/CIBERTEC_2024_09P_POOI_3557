@@ -1,10 +1,10 @@
-﻿
+﻿@model IEnumerable<POOI_Semana06.Models.ReporteEmpleado>
+
 @{
     ViewBag.Title = "Inicio";
 }
 
 <h2>Inicio</h2>
-
 
 <form>
 
@@ -19,3 +19,78 @@
 
     <button class="btn btn-primary">Consultar</button>
 </form>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.employee_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.first_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.last_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.job_title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.min_salary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.max_salary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.department_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.street_address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.country_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.region_name)
+        </th>
+        
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.employee_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.first_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.last_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.job_title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.min_salary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.max_salary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.department_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.street_address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.country_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.region_name)
+            </td>
+           
+        </tr>
+    }
+
+</table>
