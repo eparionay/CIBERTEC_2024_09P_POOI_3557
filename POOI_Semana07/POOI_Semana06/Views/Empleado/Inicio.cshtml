@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Inicio";
+}
+
+<h2>Inicio</h2>
+
+
+<form>
+
+    <label>Departamento</label>
+    @Html.DropDownList("cboDepartamento", (SelectList)ViewBag.comboDepartamento, "Seleccione", new { @class = "form-control" })
+
+    <label>Trabajo</label>
+    @Html.DropDownList("cboTrabajo", (SelectList)ViewBag.comboTrabajo, "Seleccione", new { @class = "form-control" })
+
+    <label>Supervisor</label>
+    @Html.DropDownList("cboSupervisor", (SelectList)ViewBag.comboSupervisor, "Seleccione", new { @class = "form-control" })
+
+    <button class="btn btn-primary">Consultar</button>
+</form>
